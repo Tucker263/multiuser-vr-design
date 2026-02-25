@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// 視点回転処理
+// 視点回転
 // アタッチ対象: OVRInput Rotaterオブジェクト
 public class OVRInputRotaterVR : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class OVRInputRotaterVR : MonoBehaviour
     private Transform _cameraRigTransform;
 
 
-    void Start()
+    private void Start()
     {
         GameObject cameraRig = GameObject.FindWithTag(Tags.Get(TagID.CameraRig));
         if (cameraRig == null) Debug.LogError($"{Tags.Get(TagID.CameraRig)}が見つかりませんでした");
@@ -23,14 +23,14 @@ public class OVRInputRotaterVR : MonoBehaviour
     }
 
 
-    void Update()
+    private void Update()
     {
-        // 右スティックで視点移動
+        // 右スティックで視点回転
         Rotate();
     }
 
 
-    void Rotate()
+    private void Rotate()
     {
         // 右手のアナログスティックの向きを取得
         Vector2 stickR = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);

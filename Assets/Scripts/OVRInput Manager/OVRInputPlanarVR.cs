@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-// 移動処理、VR想定
-// アタッチ対象: OVRInput Movingオブジェクト
-public class OVRInputMovingVR : MonoBehaviour
+// 平面移動、VR想定
+// アタッチ対象: OVRInput Planarオブジェクト
+public class OVRInputPlanarVR : MonoBehaviour
 {
     // 移動速度
     [SerializeField] private float _speed = 2f;
@@ -16,7 +16,7 @@ public class OVRInputMovingVR : MonoBehaviour
     private Transform _centerEyeTransform;
 
 
-    void Start()
+    private void Start()
     {
         GameObject cameraRig = GameObject.FindWithTag(Tags.Get(TagID.CameraRig));
         if (cameraRig == null) Debug.LogError($"{Tags.Get(TagID.CameraRig)}が見つかりませんでした");
@@ -29,14 +29,14 @@ public class OVRInputMovingVR : MonoBehaviour
     }
 
 
-    void Update()
+    private void Update()
     {
         // 左スティックで移動
-        Move();
+        Locomote();
     }
 
 
-    void Move()
+    private void Locomote()
     {
         // 左手のアナログスティックの向きを取得
         Vector2 stickL = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick);

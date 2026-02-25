@@ -1630,7 +1630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33659880}
   m_Layer: 5
-  m_Name: Panel_Moving
+  m_Name: Panel_Locomotion
   m_TagString: MenuBarPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18155,7 +18155,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Moving
+  m_text: Locomotion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28920,7 +28920,7 @@ GameObject:
   - component: {fileID: 854151455}
   - component: {fileID: 854151457}
   m_Layer: 0
-  m_Name: OVRInput_Moving
+  m_Name: OVRInput_Planar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28950,7 +28950,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 854151454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53339396697ce41428bab9425c4acb16, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e457e2b73320ca49a7ba893351833ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 2
@@ -36111,7 +36111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1070123443}
   m_Layer: 5
-  m_Name: MovingPanel_Transport_Switch
+  m_Name: Panel_Mode_Change
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43894,7 +43894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38ad66a91f21e4f478953fd530c4d6fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxPlayers: 5
+  _maxPlayers: 20
 --- !u!1 &1350189492
 GameObject:
   m_ObjectHideFlags: 0
@@ -49950,7 +49950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568787881}
   m_Layer: 5
-  m_Name: MovingPanel_InOut_Position_Switch
+  m_Name: Panel_InOut_Position_Change
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50960,7 +50960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596969793}
   m_Layer: 5
-  m_Name: MovingPanel_Floor_Position_Switch
+  m_Name: Panel_Floor_Position_Change
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54811,7 +54811,7 @@ GameObject:
   - component: {fileID: 1745456948}
   - component: {fileID: 1745456953}
   m_Layer: 5
-  m_Name: Btn_Moving
+  m_Name: Btn_Locomotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54943,7 +54943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de609dfcc17ba947b3bcb098c635536, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetUIName: Panel_Moving
+  _targetUIName: Panel_Locomotion
 --- !u!1 &1763875916
 GameObject:
   m_ObjectHideFlags: 0
