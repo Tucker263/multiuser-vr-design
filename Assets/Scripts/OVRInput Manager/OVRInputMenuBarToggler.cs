@@ -23,16 +23,7 @@ public class OVRInputMenuBarToggler : MonoBehaviour
 
     public void ToggleMenuBar()
     {
-        // メニューバーのオンオフ処理(Space)、VR環境以外
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameObject obj = _menuBarCanvas;
-            obj.SetActive(!obj.activeSelf);
-        }
-        */
-
-        // メニューバーのオンオフ処理(Startボタン)、VR環境用
+        // メニューバーのオンオフ処理(Startボタン)
         if (OVRInput.GetDown(OVRInput.RawButton.Start))
         {
             GameObject obj = _menuBarCanvas;

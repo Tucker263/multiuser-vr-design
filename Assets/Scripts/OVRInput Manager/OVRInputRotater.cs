@@ -5,7 +5,7 @@ using UnityEngine;
 
 // 視点回転
 // アタッチ対象: OVRInput Rotaterオブジェクト
-public class OVRInputRotaterVR : MonoBehaviour
+public class OVRInputRotater : MonoBehaviour
 {
     // スティック感度
     private float _stickSensitivity;

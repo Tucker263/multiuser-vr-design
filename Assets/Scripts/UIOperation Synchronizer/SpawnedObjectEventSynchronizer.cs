@@ -17,8 +17,7 @@ public class SpawnedObjectEventSynchronizer : MonoBehaviourPunCallbacks
         if(targetView == null) return;
 
         // ローカル反映
-        RPC_RegisterEvent(targetView.ViewID);
-        //RPC_RegisterRayInteractable(targetView.viewID);
+        RPC_RegisterRayInteractable(targetView.ViewID);
 
     }
 
@@ -29,22 +28,9 @@ public class SpawnedObjectEventSynchronizer : MonoBehaviourPunCallbacks
         if(targetView == null) return;
 
         // 他のクライアントに同期
-        //photonView.RPC(nameof(RPC_RegisterEvent), RpcTarget.Others, targetView.ViewID);
         photonView.RPC(nameof(RPC_RegisterRayInteractable), RpcTarget.Others, targetView.ViewID);
 
     }
-   
-
-    [PunRPC]
-    private void RPC_RegisterEvent(int viewID)
-    {
-        GameObject obj = PhotonView.Find(viewID)?.gameObject;
-        if(obj == null) return;
-
-        SelectedObjectEventRegister.RegisterFromObj(obj);
-
-    }
-
     
    [PunRPC]
    private void RPC_RegisterRayInteractable(int viewID)
@@ -52,7 +38,7 @@ public class SpawnedObjectEventSynchronizer : MonoBehaviourPunCallbacks
         GameObject obj = PhotonView.Find(viewID)?.gameObject;
         if(obj == null) return;
 
-        SelectedObjectEventRegister.RegisterFromObj(obj);
+        SelectedObjectRayInteractableRegister.RegisterFromObj(obj);
         
    }
     
